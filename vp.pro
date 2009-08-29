@@ -9,5 +9,5 @@ INCLUDEPATH += .
 QT += phonon
 
 # Input
-HEADERS += player.h
-SOURCES += main.cc player.cc
+HEADERS += player.h videowidgetx.h
+SOURCES += main.cc player.cc videowidgetx.cc
