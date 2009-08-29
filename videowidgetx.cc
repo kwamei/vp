@@ -1,4 +1,5 @@
 #include <iostream>
+#include <QApplication>
 #include <QKeyEvent>
 #include "player.h"
 #include "videowidgetx.h"
@@ -16,6 +17,12 @@ void VideoWidgetX::keyPressEvent(QKeyEvent *e)
     if (e->key() == Qt::Key_P) {
 	e->accept();
 	emit pausePressed();
+    } else if (e->key() == Qt::Key_F) {
+	e->accept();
+	setFullScreen(!isFullScreen());
+    } else if (e->key() == Qt::Key_Q) {
+	e->accept();
+	qApp->quit();
     }
 
     Phonon::VideoWidget::keyPressEvent(e);
