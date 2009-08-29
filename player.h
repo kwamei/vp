@@ -23,6 +23,9 @@ class Player : public QMainWindow
 	Phonon::VideoWidget *m_videoWidget;
 	Phonon::AudioOutput *m_audioOutput;
 	Phonon::MediaObject *m_mediaObject;
+
+    public slots:
+	void togglePause();
 };
 
 #endif // PLAYER_H
